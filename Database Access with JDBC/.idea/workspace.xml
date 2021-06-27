@@ -38,7 +38,21 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.GetMinionNames">
+  <component name="RunManager" selected="Application.ChangeTownNamesCasing">
+    <configuration name="AddMinion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AddMinion" />
+      <module name="Database Access with JDBC" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChangeTownNamesCasing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ChangeTownNamesCasing" />
+      <module name="Database Access with JDBC" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GetMinionNames" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GetMinionNames" />
       <module name="Database Access with JDBC" />
@@ -66,6 +80,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ChangeTownNamesCasing" />
+        <item itemvalue="Application.AddMinion" />
         <item itemvalue="Application.GetMinionNames" />
         <item itemvalue="Application.GetVillainsNames" />
       </list>
@@ -79,7 +95,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1624543793711</updated>
-      <workItem from="1624543795316" duration="6607000" />
+      <workItem from="1624543795316" duration="7392000" />
+      <workItem from="1624565916757" duration="6119000" />
+      <workItem from="1624797294863" duration="2578000" />
     </task>
     <servers />
   </component>
