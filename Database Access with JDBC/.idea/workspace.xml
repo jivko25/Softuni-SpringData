@@ -38,7 +38,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.ChangeTownNamesCasing">
+  <component name="RunManager" selected="Application.PrintAllMinionsAge">
     <configuration name="AddMinion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="AddMinion" />
       <module name="Database Access with JDBC" />
@@ -67,19 +67,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration name="PrintAllMinionsAge" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PrintAllMinionsAge" />
+      <module name="Database Access with JDBC" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PrintAllMinionsAge" />
         <item itemvalue="Application.ChangeTownNamesCasing" />
         <item itemvalue="Application.AddMinion" />
         <item itemvalue="Application.GetMinionNames" />
@@ -98,6 +108,7 @@
       <workItem from="1624543795316" duration="7392000" />
       <workItem from="1624565916757" duration="6119000" />
       <workItem from="1624797294863" duration="2578000" />
+      <workItem from="1624888646658" duration="1664000" />
     </task>
     <servers />
   </component>
