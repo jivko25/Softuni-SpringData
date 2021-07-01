@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class ChangeTownNamesCasing {
-    public static void main(String[] args) throws SQLException {
+    public static void ChangeTownNamesCasing() throws SQLException {
         Connection connection = SetUp.databaseSetUp();
         Scanner sc = new Scanner(System.in);
 

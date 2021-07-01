@@ -4,7 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class PrintAllMinionsAge {
-    public static void main(String[] args) throws SQLException {
+    public static void PrintAllMinionsAge() throws SQLException {
         Connection connection = SetUp.databaseSetUp();
 
         int maxId = DatabaseSizeCounter(connection);

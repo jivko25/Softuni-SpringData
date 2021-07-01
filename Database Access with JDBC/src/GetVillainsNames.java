@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.sql.*;
 
 public class GetVillainsNames {
-    public static void main(String[] args) throws SQLException{
+    public static void GetVillainsNames() throws SQLException{
         Connection connection = SetUp.databaseSetUp();
 
         PreparedStatement prep = connection.prepareStatement("SELECT villains.name, COUNT(DISTINCT mv.minion_id) AS `minion_count` FROM minions_db.villains\n" +

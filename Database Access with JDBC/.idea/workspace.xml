@@ -29,7 +29,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/mysql-connector-java-8.0.25.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../IntroductionToHibernate" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -38,14 +38,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
-  <component name="RunManager" selected="Application.PrintAllMinionsAge">
-    <configuration name="AddMinion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="AddMinion" />
-      <module name="Database Access with JDBC" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.testMain">
     <configuration name="ChangeTownNamesCasing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ChangeTownNamesCasing" />
       <module name="Database Access with JDBC" />
@@ -53,15 +46,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetMinionNames" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GetMinionNames" />
+    <configuration name="IncreseMinionsAge" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="IncreseMinionsAge" />
       <module name="Database Access with JDBC" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetVillainsNames" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GetVillainsNames" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="Database Access with JDBC" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -74,26 +67,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+    <configuration name="testMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="testMain" />
+      <module name="Database Access with JDBC" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.testMain" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.IncreseMinionsAge" />
         <item itemvalue="Application.PrintAllMinionsAge" />
         <item itemvalue="Application.ChangeTownNamesCasing" />
-        <item itemvalue="Application.AddMinion" />
-        <item itemvalue="Application.GetMinionNames" />
-        <item itemvalue="Application.GetVillainsNames" />
       </list>
     </recent_temporary>
   </component>
@@ -108,7 +95,10 @@
       <workItem from="1624543795316" duration="7392000" />
       <workItem from="1624565916757" duration="6119000" />
       <workItem from="1624797294863" duration="2578000" />
-      <workItem from="1624888646658" duration="1664000" />
+      <workItem from="1624888646658" duration="2257000" />
+      <workItem from="1624993258399" duration="1870000" />
+      <workItem from="1625008681287" duration="1652000" />
+      <workItem from="1625180365791" duration="68000" />
     </task>
     <servers />
   </component>

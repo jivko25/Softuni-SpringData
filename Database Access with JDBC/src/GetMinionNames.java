@@ -5,7 +5,7 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class GetMinionNames {
-    public static void main(String[] args) throws SQLException {
+    public static void GetMinionNames() throws SQLException {
         Scanner sc = new Scanner(System.in);
         Connection connection = SetUp.databaseSetUp();
         int villainID = Integer.parseInt(sc.nextLine());

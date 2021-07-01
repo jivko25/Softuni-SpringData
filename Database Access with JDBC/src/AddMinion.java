@@ -9,7 +9,7 @@ public class AddMinion {
         public static Scanner sc = new Scanner(System.in);
         public static Connection connection;
 
-    public static void main(String[] args) throws SQLException {
+    public static void AddMinion() throws SQLException {
 
         connection = SetUp.databaseSetUp();
 
