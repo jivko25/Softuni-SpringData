@@ -99,6 +99,14 @@ public class Engine implements Runnable{
     }
 
     private void ex5() {
+        entityManager.createQuery("SELECT e FROM Employee e " +
+                "WHERE e.department.name = :d_name " +
+                "ORDER BY e.salary, e.id ", Employee.class)
+                .setParameter("d_name", "Research and Development")
+                .getResultList()
+                .forEach(e -> System.out.printf("%s %s from Research and Development - $%.2f\n", e.getFirstName(), e.getLastName(), e.getSalary()));
+
+
     }
 
     private void ex6() {
