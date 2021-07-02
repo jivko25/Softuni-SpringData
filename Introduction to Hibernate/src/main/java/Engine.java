@@ -1,3 +1,4 @@
+import entities.Address;
 import entities.Employee;
 
 import javax.persistence.EntityManager;
@@ -110,6 +111,20 @@ public class Engine implements Runnable{
     }
 
     private void ex6() {
+        System.out.println("Enter employee last name:");
+        String lastName = sc.nextLine();
+        Address address = new Address();
+        address.setText("Vitoshka 15");
+        entityManager.getTransaction().begin();
+        entityManager.persist(address);
+        entityManager.getTransaction().commit();
+        Employee employee = entityManager.createQuery("SELECT e FROM Employee e " +
+                "WHERE e.lastName = :l_name", Employee.class)
+                .setParameter("l_name", lastName)
+                .getSingleResult();
+        entityManager.getTransaction().begin();
+        employee.setAddress(address);
+        entityManager.getTransaction().commit();
     }
 
     private void ex7() {
