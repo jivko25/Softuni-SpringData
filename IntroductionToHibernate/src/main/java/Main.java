@@ -7,5 +7,7 @@ public class Main {
         EntityManagerFactory emf = Persistence
                 .createEntityManagerFactory("softuni");
         EntityManager entityManager = emf.createEntityManager();
+        Engine engine = new Engine(entityManager);
+        engine.run();
     }
 }

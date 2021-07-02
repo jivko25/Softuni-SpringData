@@ -1,0 +1,121 @@
+import entities.Employee;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+import javax.persistence.criteria.CriteriaBuilder;
+import java.util.Scanner;
+
+public class Engine implements Runnable{
+    private EntityManager entityManager;
+    private Scanner sc;
+
+    public Engine(EntityManager entityManager){
+        this.entityManager = entityManager;
+        this.sc = new Scanner(System.in);
+    }
+
+
+    @Override
+    public void run() {
+        System.out.print("Enter number of exersise:");
+        int ex = Integer.parseInt(sc.nextLine());
+        System.out.println();
+        switch (ex){
+            case 2:
+                ex2();
+                break;
+            case 3:
+                ex3();
+                break;
+            case 4:
+                ex4();
+                break;
+            case 5:
+                ex5();
+                break;
+            case 6:
+                ex6();
+                break;
+            case 7:
+                ex7();
+                break;
+            case 8:
+                ex8();
+                break;
+            case 9:
+                ex9();
+                break;
+            case 10:
+                ex10();
+                break;
+            case 11:
+                ex11();
+                break;
+            case 12:
+                ex12();
+                break;
+            case 13:
+                ex13();
+                break;
+        }
+        System.out.println("Do you want next task (Enter next/close)!");
+        String next = sc.nextLine();
+        switch (next){
+            case "next":
+                run();
+                break;
+            case "close":
+                System.out.println("Bye! :)");
+                break;
+        }
+    }
+
+    private void ex2() {
+        entityManager.getTransaction().begin();
+        Query query = entityManager.createQuery("UPDATE Town t SET t.name = UPPER(t.name) WHERE length(t.name) <= 5 ");
+        int affectedRows = query.executeUpdate();
+        System.out.println(affectedRows);
+        entityManager.getTransaction().commit();
+    }
+
+    private void ex3() {
+        String [] search = sc.nextLine().split("\\s+");
+        Long singleResult = entityManager.createQuery("SELECT count (e) FROM Employee e " +
+                "WHERE e.firstName = :f_name AND e.lastName = :l_name", Long.class)
+                .setParameter("f_name", search[0])
+                .setParameter("l_name", search[1])
+                .getSingleResult();
+        System.out.println(singleResult == 0 ? "No" : "Yes");
+    }
+
+    private void ex4() {
+    }
+
+    private void ex5() {
+    }
+
+    private void ex6() {
+    }
+
+    private void ex7() {
+    }
+
+    private void ex8() {
+    }
+
+    private void ex9() {
+    }
+
+    private void ex10() {
+    }
+
+    private void ex11() {
+    }
+
+    private void ex12() {
+    }
+
+    private void ex13() {
+    }
+
+}
