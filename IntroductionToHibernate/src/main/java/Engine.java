@@ -3,6 +3,8 @@ import entities.Employee;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaBuilder;
+import java.math.BigDecimal;
+import java.util.List;
 import java.util.Scanner;
 
 public class Engine implements Runnable{
@@ -89,6 +91,11 @@ public class Engine implements Runnable{
     }
 
     private void ex4() {
+        entityManager.createQuery("SELECT e FROM Employee e " +
+                "WHERE e.salary > :min_salary", Employee.class)
+                .setParameter("min_salary", BigDecimal.valueOf(50000L))
+                .getResultStream()
+                .forEach(e -> System.out.println(e.getFirstName()));
     }
 
     private void ex5() {
