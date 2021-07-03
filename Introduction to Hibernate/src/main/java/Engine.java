@@ -128,6 +128,17 @@ public class Engine implements Runnable{
     }
 
     private void ex7() {
+        List <Address> addresses = entityManager.createQuery("SELECT a FROM Address a " +
+                "ORDER BY a.employees.size DESC", Address.class)
+                .getResultList();
+
+        addresses
+                .forEach(address -> {
+                    System.out.printf("%s, %s - %d employees%n",
+                            address.getText(),
+                            address.getTown() == null ? "Unknows" : address.getTown().getName(),
+                            address.getEmployees().size());
+                });
     }
 
     private void ex8() {
