@@ -1,5 +1,6 @@
 import entities.Address;
 import entities.Employee;
+import entities.Project;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -7,6 +8,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import java.math.BigDecimal;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Engine implements Runnable{
     private EntityManager entityManager;
@@ -142,6 +144,11 @@ public class Engine implements Runnable{
     }
 
     private void ex8() {
+        int id = Integer.parseInt(sc.next());
+        Employee employee = entityManager.find(Employee.class, 147);
+        System.out.printf("%s %s - %s%n", employee.getFirstName(), employee.getLastName(), employee.getJobTitle());
+        Set<Project> projects = employee.getProjects();
+        projects.forEach(project -> System.out.println(project.getName()));
     }
 
     private void ex9() {
