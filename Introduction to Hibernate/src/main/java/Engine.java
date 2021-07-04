@@ -182,10 +182,17 @@ public class Engine implements Runnable{
                     .setParameter("marketing", "Marketing")
                     .setParameter("information_serveces", "Information Serveces")
                     .getResultList()
-                    .forEach(employee -> System.out.printf("%s %s (%.2f)%n", employee.getFirstName(), employee.getLastName(), employee.getSalary()));
+                    .forEach(employee -> System.out.printf("%s %s ($%.2f)%n", employee.getFirstName(), employee.getLastName(), employee.getSalary()));
     }
 
     private void ex11() {
+        String pattern  = sc.nextLine();
+        entityManager.createQuery("SELECT e FROM Employee e " +
+                "WHERE e.firstName LIKE concat(:p_like, '%')", Employee.class)
+                .setParameter("p_like", pattern)
+                .getResultList()
+                .forEach(employee -> System.out.printf("%s %s - %s - ($%.2f)%n",
+                        employee.getFirstName(), employee.getLastName(), employee.getJobTitle(), employee.getSalary()));
     }
 
     private void ex12() {
