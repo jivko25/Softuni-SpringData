@@ -196,6 +196,14 @@ public class Engine implements Runnable{
     }
 
     private void ex12() {
+        List<Object[]> list = entityManager.createNativeQuery("SELECT d.name, MAX(e.salary) as max_salary FROM departments d\n" +
+                "JOIN employees e on d.department_id = e.department_id\n" +
+                "GROUP BY d.name\n" +
+                "HAVING `max_salary` NOT BETWEEN 30000 AND 70000 " +
+                "ORDER BY max_salary DESC;")
+                .getResultList();
+        list.forEach(item -> System.out.printf("%s, %.2f%n", item[0], item[1]));
+
     }
 
     private void ex13() {
