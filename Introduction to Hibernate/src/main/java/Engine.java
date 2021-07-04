@@ -1,6 +1,7 @@
 import entities.Address;
 import entities.Employee;
 import entities.Project;
+import entities.Town;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -203,10 +204,29 @@ public class Engine implements Runnable{
                 "ORDER BY max_salary DESC;")
                 .getResultList();
         list.forEach(item -> System.out.printf("%s, %.2f%n", item[0], item[1]));
-
     }
 
     private void ex13() {
+        System.out.println("Enter town name:");
+        String townName = sc.nextLine();
+        Town town = entityManager.createQuery("SELECT t FROM Town t WHERE t.name = :t_name", Town.class)
+                .setParameter("t_name", townName)
+                .getSingleResult();
+        List <Address> addresses = entityManager.createQuery("Select a FROM Address a " +
+                "WHERE a.town.id = :id", Address.class)
+                .setParameter("id", town.getId())
+                .getResultList();
+        entityManager.getTransaction().begin();
+        addresses.forEach(entityManager::remove);
+        entityManager.getTransaction().commit();
+        entityManager.getTransaction().begin();
+        entityManager.remove(town);
+        entityManager.getTransaction().commit();
+        if (addresses.size() <= 0) {
+            System.out.printf("%d address in %s deleted%n", addresses.size(), town.getName());
+        } else {
+            System.out.printf("%d addresses in %s deleted%n", addresses.size(), town.getName());
+        }
     }
 
 }
