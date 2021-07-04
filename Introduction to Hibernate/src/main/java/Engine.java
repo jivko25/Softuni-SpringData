@@ -132,6 +132,7 @@ public class Engine implements Runnable{
     private void ex7() {
         List <Address> addresses = entityManager.createQuery("SELECT a FROM Address a " +
                 "ORDER BY a.employees.size DESC", Address.class)
+                .setMaxResults(10)
                 .getResultList();
 
         addresses
@@ -152,9 +153,36 @@ public class Engine implements Runnable{
     }
 
     private void ex9() {
+        List<Project> projects = entityManager
+                .createQuery("SELECT p FROM Project p " +
+                                "ORDER BY p.name ", Project.class)
+                .setMaxResults(10)
+                .getResultList();
+        projects.forEach(project -> System.out.printf("Project name: %s%n" +
+                "Project description: %s%n" +
+                "Project start date: %s%n" +
+                "Project end date: %s%n", project.getName(), project.getDescription(), project.getStartDate(), project.getEndDate()));
     }
 
     private void ex10() {
+        entityManager.getTransaction().begin();
+        entityManager.createQuery("UPDATE Employee e SET e.salary = e.salary * 1.12 " +
+                                    "WHERE e.department.id IN :ids ")
+                    .setParameter("ids", Set.of(1, 2, 4, 11))
+                    .executeUpdate();
+        entityManager.getTransaction().commit();
+        System.out.println("test");
+        entityManager.createQuery("SELECT e FROM Employee e " +
+                                    "WHERE e.department.name = :engineering " +
+                                    "OR e.department.name = :tool_design " +
+                                    "OR e.department.name = :marketing " +
+                                    "OR e.department.name = :information_serveces", Employee.class)
+                    .setParameter("engineering", "Engineering")
+                    .setParameter("tool_design","Tool Design")
+                    .setParameter("marketing", "Marketing")
+                    .setParameter("information_serveces", "Information Serveces")
+                    .getResultList()
+                    .forEach(employee -> System.out.printf("%s %s (%.2f)%n", employee.getFirstName(), employee.getLastName(), employee.getSalary()));
     }
 
     private void ex11() {
