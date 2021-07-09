@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="39c6aed6-47fe-4ef5-9a58-19d320164d31" name="Default Changelist" comment="" />
+    <list default="true" id="fd7fa5e7-0309-4cf2-973c-fa93c79c58eb" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,14 +18,9 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/Main.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/Engine2.java" root0="FORCE_HIGHLIGHTING" />
-  </component>
-  <component name="ProjectId" id="1um8b90TW4TVgjolW3UgaEaROAV" />
+  <component name="ProjectId" id="1v4ycPssj8gDqcKiRM1elHlRYHY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -37,20 +32,35 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Hibernate code first/Ex1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="16" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="introtohibernate" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -64,24 +74,21 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="39c6aed6-47fe-4ef5-9a58-19d320164d31" name="Default Changelist" comment="" />
-      <created>1625259473652</created>
+      <changelist id="fd7fa5e7-0309-4cf2-973c-fa93c79c58eb" name="Default Changelist" comment="" />
+      <created>1625835735581</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1625259473652</updated>
-      <workItem from="1625259474870" duration="4229000" />
-      <workItem from="1625314330338" duration="2245000" />
-      <workItem from="1625355465252" duration="4597000" />
-      <workItem from="1625401913747" duration="1561000" />
-      <workItem from="1625420587479" duration="1408000" />
-      <workItem from="1625422023890" duration="159000" />
-      <workItem from="1625427602880" duration="2796000" />
-      <workItem from="1625779793257" duration="1341000" />
-      <workItem from="1625835513410" duration="219000" />
+      <updated>1625835735581</updated>
+      <workItem from="1625835736846" duration="2290000" />
+      <workItem from="1625856642899" duration="3397000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
