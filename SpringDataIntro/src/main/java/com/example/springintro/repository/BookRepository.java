@@ -5,6 +5,7 @@ import com.example.springintro.model.entity.Book;
 import com.example.springintro.model.entity.EditionType;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.math.BigDecimal;
@@ -27,4 +28,6 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     List<Book> findAllByPriceLessThanOrPriceGreaterThan(BigDecimal min, BigDecimal max);
 
     List<Book> findAllByReleaseDateBeforeOrReleaseDateAfter(LocalDate startDate, LocalDate endDate);
+
+
 }

@@ -1,6 +1,7 @@
 package com.example.springintro.service.impl;
 
 import com.example.springintro.model.entity.*;
+import com.example.springintro.repository.AuthorRepository;
 import com.example.springintro.repository.BookRepository;
 import com.example.springintro.service.AuthorService;
 import com.example.springintro.service.BookService;
@@ -115,6 +116,17 @@ public class BookServiceImpl implements BookService {
                 .map(Book::getTitle)
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public List<String> findAllBooksBeforeDate(int year, int mounth, int day) {
+        return bookRepository
+                .findAllByReleaseDateBefore(LocalDate.of(year, mounth, day))
+                .stream()
+                .map(book -> String.format("%s %s %.2f", book.getTitle(), book.getEditionType(), book.getPrice()))
+                .collect(Collectors.toList());
+    }
+
+
 
     private Book createBookFromInfo(String[] bookInfo) {
         EditionType editionType = EditionType.values()[Integer.parseInt(bookInfo[0])];

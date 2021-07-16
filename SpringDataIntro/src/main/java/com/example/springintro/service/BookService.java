@@ -23,4 +23,7 @@ public interface BookService {
     List<String> findBooksByPrice(BigDecimal min, BigDecimal max);
 
     List<String> notReleasedBooks(int year);
+
+    List<String> findAllBooksBeforeDate(int year, int month, int day);
+
 }

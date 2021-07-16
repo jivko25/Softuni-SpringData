@@ -48,6 +48,12 @@ public class CommandLineRunnerImpl implements CommandLineRunner {
             case "4":
                 printNotReleasedBooks();
                 break;
+            case "5":
+                printBooksBeforeDate();
+                break;
+            case "6":
+                printAuthorsFromPattern();
+                break;
         }
 
     }
@@ -104,6 +110,21 @@ public class CommandLineRunnerImpl implements CommandLineRunner {
         int year = Integer.parseInt(scanner.nextLine());
         bookService
                 .notReleasedBooks(year)
+                .forEach(System.out::println);
+    }
+
+    private void printBooksBeforeDate(){
+        String [] date = scanner.nextLine().split("-");
+        bookService
+                .findAllBooksBeforeDate(Integer.parseInt(date[2]), Integer.parseInt(date[1]), Integer.parseInt(date[0]))
+                .forEach(System.out::println);
+    }
+
+    private void printAuthorsFromPattern(){
+        System.out.println("Enter pattern:");
+        String pattern = scanner.nextLine();
+        authorService
+                .findAllBooksWithAuthorEnds(pattern)
                 .forEach(System.out::println);
     }
 
