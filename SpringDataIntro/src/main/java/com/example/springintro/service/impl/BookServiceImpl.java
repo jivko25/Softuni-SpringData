@@ -15,6 +15,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Locale;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -76,6 +77,14 @@ public class BookServiceImpl implements BookService {
                         book.getTitle(),
                         book.getReleaseDate(),
                         book.getCopies()))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<String> findAllBookNameByAgeRestriction(AgeRestriction ageRestriction) {
+        return bookRepository.findAllByAgeRestriction(ageRestriction)
+                .stream()
+                .map(Book::getTitle)
                 .collect(Collectors.toList());
     }
 
