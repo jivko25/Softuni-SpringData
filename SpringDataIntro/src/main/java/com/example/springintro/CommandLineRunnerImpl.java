@@ -54,6 +54,9 @@ public class CommandLineRunnerImpl implements CommandLineRunner {
             case "6":
                 printAuthorsFromPattern();
                 break;
+            case "7":
+                printBooksByPattern();
+                break;
         }
 
     }
@@ -125,6 +128,14 @@ public class CommandLineRunnerImpl implements CommandLineRunner {
         String pattern = scanner.nextLine();
         authorService
                 .findAllBooksWithAuthorEnds(pattern)
+                .forEach(System.out::println);
+    }
+
+    private void printBooksByPattern(){
+        System.out.println("Enter book pattern:");
+        String pattern = scanner.nextLine();
+        bookService
+                .findBooksByTitlePattern(pattern)
                 .forEach(System.out::println);
     }
 

@@ -26,4 +26,6 @@ public interface BookService {
 
     List<String> findAllBooksBeforeDate(int year, int month, int day);
 
+    List<String> findBooksByTitlePattern(String pattern);
+
 }

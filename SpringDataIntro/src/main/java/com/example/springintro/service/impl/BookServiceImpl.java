@@ -126,6 +126,14 @@ public class BookServiceImpl implements BookService {
                 .collect(Collectors.toList());
     }
 
+    @Override
+    public List<String> findBooksByTitlePattern(String pattern) {
+        return bookRepository
+                .findBookByPattern(pattern)
+                .stream()
+                .map(Book::getTitle)
+                .collect(Collectors.toList());
+    }
 
 
     private Book createBookFromInfo(String[] bookInfo) {

@@ -29,5 +29,7 @@ public interface BookRepository extends JpaRepository<Book, Long> {
 
     List<Book> findAllByReleaseDateBeforeOrReleaseDateAfter(LocalDate startDate, LocalDate endDate);
 
+    @Query(value = "Select b FROM Book b WHERE b.title LIKE %:pattern%")
+    List<Book> findBookByPattern(@Param(value = "pattern") String pattern);
 
 }
