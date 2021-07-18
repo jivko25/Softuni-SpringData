@@ -32,4 +32,19 @@ public interface BookRepository extends JpaRepository<Book, Long> {
     @Query(value = "Select b FROM Book b WHERE b.title LIKE %:pattern%")
     List<Book> findBookByPattern(@Param(value = "pattern") String pattern);
 
+    @Query(value = "Select b FROM Book b WHERE b.author.lastName LIKE :pattern%")
+    List<Book> findBookByAuthorPattern(@Param(value = "pattern") String pattern);
+
+    @Query(value = "Select count (b) FROM Book b WHERE length(b.title) > :target")
+    int findBooksByLength(@Param(value = "target") int target);
+
+    @Query(value = "Select sum(b.copies) From Book b WHERE b.author.firstName = :firstName AND b.author.lastName = :lastName")
+    int findBookCopiesByAuthor(@Param(value = "firstName") String firstName,
+                                      @Param(value = "lastName") String lastName);
+
+    List<Book> findAllByTitle(String title);
+
+//    @Query(value = "select b FROM Book b WHERE b.title = :target")
+//    List<Book> findAllByTitle(@Param(value = "target") String title);
+
 }

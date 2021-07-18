@@ -13,4 +13,7 @@ public interface AuthorService {
     List<String> getAllAuthorsOrderByCountOfTheirBooks();
 
     List<String> findAllBooksWithAuthorEnds(String pattern);
+
+    List<String> findAuthorWithCopies();
+
 }

@@ -1,7 +1,6 @@
 package com.example.springintro.service.impl;
 
 import com.example.springintro.model.entity.*;
-import com.example.springintro.repository.AuthorRepository;
 import com.example.springintro.repository.BookRepository;
 import com.example.springintro.service.AuthorService;
 import com.example.springintro.service.BookService;
@@ -16,7 +15,6 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Locale;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -132,6 +130,30 @@ public class BookServiceImpl implements BookService {
                 .findBookByPattern(pattern)
                 .stream()
                 .map(Book::getTitle)
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public List<String> findBooksByAuthorPattern(String pattern) {
+        return bookRepository
+                .findBookByAuthorPattern(pattern)
+                .stream()
+                .map(book -> String.format("%s (%s %s)", book.getTitle(), book.getAuthor().getFirstName(), book.getAuthor().getLastName()))
+                .collect(Collectors.toList());
+    }
+
+    @Override
+    public int findBooksByLength(int length) {
+        return bookRepository
+                .findBooksByLength(length);
+    }
+
+    @Override
+    public List<String> findBookByTitle(String title) {
+        return bookRepository
+                .findAllByTitle(title)
+                .stream()
+                .map(book -> String.format("%s %s %s %.2f", book.getTitle(), book.getEditionType(), book.getAgeRestriction(), book.getPrice()))
                 .collect(Collectors.toList());
     }
 

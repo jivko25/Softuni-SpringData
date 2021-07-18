@@ -17,4 +17,7 @@ public interface AuthorRepository extends JpaRepository<Author, Long> {
 
     @Query(value = "Select a From Author a WHERE a.firstName LIKE %:patern")
     List<Author> findAllByPattern(@Param(value = "patern") String patern);
+
+    @Query(value = "Select a From Author a")
+    List<Author> findAllAuthors();
 }

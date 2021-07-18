@@ -2,6 +2,7 @@ package com.example.springintro.service.impl;
 
 import com.example.springintro.model.entity.Author;
 import com.example.springintro.repository.AuthorRepository;
+import com.example.springintro.repository.BookRepository;
 import com.example.springintro.service.AuthorService;
 import org.springframework.stereotype.Service;
 
@@ -18,9 +19,11 @@ public class AuthorServiceImpl implements AuthorService {
     private static final String AUTHORS_FILE_PATH = "src/main/resources/files/authors.txt";
 
     private final AuthorRepository authorRepository;
+    private final BookRepository bookRepository;
 
-    public AuthorServiceImpl(AuthorRepository authorRepository) {
+    public AuthorServiceImpl(AuthorRepository authorRepository, BookRepository bookRepository) {
         this.authorRepository = authorRepository;
+        this.bookRepository = bookRepository;
     }
 
     @Override
@@ -69,4 +72,18 @@ public class AuthorServiceImpl implements AuthorService {
                 .map(author -> String.format("%s %s", author.getFirstName(), author.getLastName()))
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public List<String> findAuthorWithCopies() {
+        return authorRepository
+                .findAllAuthors()
+                .stream()
+                .map(author -> {
+                    int countCopies = bookRepository.findBookCopiesByAuthor(author.getFirstName(), author.getLastName());
+                    return String.format("%s %s - %d", author.getFirstName(), author.getLastName(), countCopies);
+                })
+                .collect(Collectors.toList());
+    }
+
+
 }

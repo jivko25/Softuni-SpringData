@@ -50,6 +50,19 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringintroApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="springintro" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springintro.SpringintroApplication" />
@@ -71,7 +84,7 @@
       <workItem from="1626185516404" duration="1863000" />
       <workItem from="1626204171891" duration="1165000" />
       <workItem from="1626441560687" duration="12593000" />
-      <workItem from="1626461684776" duration="2440000" />
+      <workItem from="1626461684776" duration="6774000" />
     </task>
     <servers />
   </component>

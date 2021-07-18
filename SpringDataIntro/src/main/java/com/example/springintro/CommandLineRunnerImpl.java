@@ -57,9 +57,22 @@ public class CommandLineRunnerImpl implements CommandLineRunner {
             case "7":
                 printBooksByPattern();
                 break;
+            case "8":
+                printBooksByAuthorPattern();
+                break;
+            case "9":
+                printCountBooks();
+                break;
+            case "10":
+                printAuthorWithCopies();
+                break;
+            case "11":
+                printBooksByTitle();
+                break;
         }
 
     }
+
 
 
     private void pritnALlBooksByAuthorNameOrderByReleaseDate(String firstName, String lastName) {
@@ -136,6 +149,34 @@ public class CommandLineRunnerImpl implements CommandLineRunner {
         String pattern = scanner.nextLine();
         bookService
                 .findBooksByTitlePattern(pattern)
+                .forEach(System.out::println);
+    }
+
+    private void printBooksByAuthorPattern(){
+        System.out.println("Enter author pattern:");
+        String pattern = scanner.nextLine();
+        bookService
+                .findBooksByAuthorPattern(pattern)
+                .forEach(System.out::println);
+    }
+
+    private void printCountBooks(){
+        System.out.println("Enter book length:");
+        int lenght = Integer.parseInt(scanner.nextLine());
+        System.out.printf("There are %d books with longer title than %d symbols", bookService.findBooksByLength(lenght), lenght);
+    }
+
+    private void printAuthorWithCopies(){
+        authorService
+                .findAuthorWithCopies()
+                .forEach(System.out::println);
+    }
+
+    private void printBooksByTitle() {
+        System.out.println("Enter book title:");
+        String title = scanner.nextLine();
+        bookService
+                .findBookByTitle(title)
                 .forEach(System.out::println);
     }
 

@@ -28,4 +28,10 @@ public interface BookService {
 
     List<String> findBooksByTitlePattern(String pattern);
 
+    List<String> findBooksByAuthorPattern(String pattern);
+
+    int findBooksByLength(int length);
+
+    List<String> findBookByTitle(String title);
+
 }
