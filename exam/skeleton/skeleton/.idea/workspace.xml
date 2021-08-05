@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9130291a-a9aa-48e2-bfbd-4494e6fe0568" name="Default Changelist" comment="" />
+    <list default="true" id="2777be20-4553-4fc7-8e1c-1364982d0796" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,21 +13,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/springintro/service/BookService.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/springintro/CommandLineRunnerImpl.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/springintro/service/impl/BookServiceImpl.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/springintro/repository/BookRepository.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/example/springintro/model/entity/AgeRestriction.java" root0="FORCE_HIGHLIGHTING" />
-  </component>
-  <component name="ProjectId" id="1vC47dWVcRoisysR8ng3KFAGjWi" />
+  <component name="ProjectId" id="1w77OuJD2ni2DW2azENrfgc2gP4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -43,16 +37,23 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/test" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Contest last submissions for Java DB Spring Data Exam - 01 August 2021/DavideTodorov (Davide Todorov)" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.football.models.dto" />
+      <recent name="com.example.football.models.entity" />
+      <recent name="com.example.football.util" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration name="SpringintroApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="springintro" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springintro.SpringintroApplication" />
+    <configuration name="FootballApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="football" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.football.FootballApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -61,18 +62,14 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9130291a-a9aa-48e2-bfbd-4494e6fe0568" name="Default Changelist" comment="" />
-      <created>1626052572435</created>
+      <changelist id="2777be20-4553-4fc7-8e1c-1364982d0796" name="Default Changelist" comment="" />
+      <created>1627797745314</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1626052572435</updated>
-      <workItem from="1626052573905" duration="548000" />
-      <workItem from="1626131792726" duration="1434000" />
-      <workItem from="1626185516404" duration="1863000" />
-      <workItem from="1626204171891" duration="1165000" />
-      <workItem from="1626441560687" duration="12593000" />
-      <workItem from="1626461684776" duration="6774000" />
-      <workItem from="1626654986076" duration="112000" />
+      <updated>1627797745314</updated>
+      <workItem from="1627797746527" duration="14768000" />
+      <workItem from="1628079436004" duration="235000" />
+      <workItem from="1628152890884" duration="133000" />
     </task>
     <servers />
   </component>
